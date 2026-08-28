@@ -205,6 +205,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initFaqAccordion();
   initServiceModals();
   initSearch();
+  initMetricCounters();
   updateCartBadges();
 });
 
@@ -221,6 +222,49 @@ function highlightActiveNav() {
       link.classList.remove("active");
     }
   });
+}
+
+function initMetricCounters() {
+  const metricNumbers = document.querySelectorAll(".metric-number[data-target]");
+  if (!metricNumbers.length) return;
+
+  const setFinalValues = () => {
+    metricNumbers.forEach(metric => {
+      metric.textContent = `${metric.dataset.target}${metric.dataset.suffix || ""}`;
+    });
+  };
+
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches || !("IntersectionObserver" in window)) {
+    setFinalValues();
+    return;
+  }
+
+  const observer = new IntersectionObserver(entries => {
+    if (!entries.some(entry => entry.isIntersecting)) return;
+
+    metricNumbers.forEach(metric => {
+      const target = Number(metric.dataset.target);
+      const suffix = metric.dataset.suffix || "";
+      const startTime = performance.now();
+      const duration = 1400;
+
+      const updateCounter = currentTime => {
+        const progress = Math.min((currentTime - startTime) / duration, 1);
+        const easedProgress = 1 - Math.pow(1 - progress, 3);
+        const value = target % 1 === 0 ? Math.round(target * easedProgress) : (target * easedProgress).toFixed(1);
+        metric.textContent = `${value}${suffix}`;
+
+        if (progress < 1) requestAnimationFrame(updateCounter);
+      };
+
+      requestAnimationFrame(updateCounter);
+    });
+
+    observer.disconnect();
+  }, { threshold: 0.35 });
+
+  const metricGrid = document.querySelector(".about-metrics-grid");
+  if (metricGrid) observer.observe(metricGrid);
 }
 
 function initMobileMenu() {
