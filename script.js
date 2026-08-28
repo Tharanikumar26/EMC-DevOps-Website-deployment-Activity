@@ -759,38 +759,44 @@ function initServiceModals() {
   const modalBody = document.getElementById("service-modal-body");
   const closeBtn = document.getElementById("service-close-btn");
 
-  const serviceDetails = {
-    shipping: {
-      title: "24-Hour Express Shipping Details",
-      icon: "⚡",
-      content: "All orders placed prior to 2:00 PM EST qualify for same-day dispatch. We partner with DHL Express and FedEx Air to guarantee delivery within 24 hours across continental US and major European cities."
-    },
-    warranty: {
-      title: "2-Year Hardware Warranty",
-      icon: "🛡️",
-      content: "Every LUMA product includes 2 full years of mechanical failure and battery degradation coverage. If your item develops a flaw, we ship a brand new replacement before you send back the old one."
-    },
-    returns: {
-      title: "30-Day Money-Back Guarantee",
-      icon: "🔄",
-      content: "Not 100% satisfied with your order? Generate a free prepaid shipping label from your dashboard. Returns are processed within 24 hours of arrival with zero restocking fees."
-    },
-    stylist: {
-      title: "VIP Personal Stylist & Tech Curator",
-      icon: "👑",
-      content: "Schedule a complimentary 20-minute video session with our expert curators to select gifts, organize corporate bulk orders, or build customized aesthetic desk setups."
-    },
-    security: {
-      title: "Bank-Grade 256-Bit SSL Security",
-      icon: "🔒",
-      content: "Your payment token is encrypted directly via Stripe and Apple Pay servers. LUMA never stores raw credit card numbers or sensitive CVV codes on our servers."
-    },
-    gift: {
-      title: "Luxury Ribbon & Custom Gift Cards",
-      icon: "🎁",
-      content: "Select 'Gift Box' during checkout to have your items wrapped in satin ribbon inside our signature matte black box, complete with a personalized wax-sealed note."
-    }
-  };
+const serviceDetails = {
+
+  shipping: {
+    title: "Fast & Reliable Shipping",
+    icon: "⚡",
+    content: "Enjoy fast and dependable delivery on every order. Orders are carefully processed and shipped using trusted delivery partners, with tracking information provided so you can follow your package from dispatch to arrival."
+  },
+
+  warranty: {
+    title: "Product Warranty & Support",
+    icon: "🛡️",
+    content: "Our products are backed by reliable warranty coverage for eligible manufacturing or hardware issues. If you experience a problem with your purchase, our support team will help you with the replacement or service process."
+  },
+
+  returns: {
+    title: "Easy Returns & Refunds",
+    icon: "🔄",
+    content: "Changed your mind about your purchase? Our simple return process makes it easy to send eligible products back. Once the returned item is received and inspected, your refund will be processed according to our return policy."
+  },
+
+  stylist: {
+    title: "Personal Shopping Assistance",
+    icon: "👑",
+    content: "Need help choosing the right product? Our team can provide personalized recommendations based on your preferences, requirements, budget, or gifting needs."
+  },
+
+  security: {
+    title: "Secure & Protected Payments",
+    icon: "🔒",
+    content: "Your security is important to us. Payments are processed through trusted and secure payment providers using industry-standard encryption. Your sensitive payment information is protected throughout the checkout process."
+  },
+
+  gift: {
+    title: "Gift Packaging & Personal Messages",
+    icon: "🎁",
+    content: "Make your purchase special with our gift packaging options. Add a personalized message to your order and create a thoughtful experience for friends, family, or colleagues."
+  }
+};
 
   serviceButtons.forEach(btn => {
     btn.addEventListener("click", () => {
