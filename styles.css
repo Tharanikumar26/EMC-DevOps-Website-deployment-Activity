@@ -743,6 +743,28 @@ body.light-theme .site-header {
   margin: 0 auto 3rem;
 }
 
+.about-hero .section-lead {
+  margin: 0 auto 1.5rem;
+}
+
+.about-trust-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.about-trust-row span {
+  padding: 0.55rem 0.9rem;
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-full);
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
 .why-luma-section {
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
@@ -890,6 +912,13 @@ body.light-theme .site-header {
   border: 1px solid var(--border-glass);
   padding: 1.75rem;
   border-radius: var(--radius-md);
+  transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.testimonial-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(99, 102, 241, 0.4);
+  box-shadow: var(--shadow-sm);
 }
 
 .rating-stars {
@@ -908,6 +937,17 @@ body.light-theme .site-header {
   display: flex;
   align-items: center;
   gap: 0.75rem;
+}
+
+.testimonial-author strong {
+  display: block;
+}
+
+.testimonial-author span {
+  display: block;
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  margin-top: 0.15rem;
 }
 
 .author-avatar {
