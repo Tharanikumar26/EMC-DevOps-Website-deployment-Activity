@@ -8,7 +8,7 @@
 const PRODUCTS = [
   {
     id: 1,
-    name: "LUMA Horizon ANC Headphones",
+    name: "PUMA Horizon ANC Headphones",
     category: "audio",
     retailPrice: 349.00,
     memberPrice: 249.00,
@@ -35,7 +35,7 @@ const PRODUCTS = [
   },
   {
     id: 2,
-    name: "LUMA Titanium Smartwatch Ultra",
+    name: "PUMA Titanium Smartwatch Ultra",
     category: "wearables",
     retailPrice: 429.00,
     memberPrice: 349.00,
@@ -62,7 +62,7 @@ const PRODUCTS = [
   },
   {
     id: 3,
-    name: "LUMA Studio Wireless Earbuds",
+    name: "PUMA Studio Wireless Earbuds",
     category: "audio",
     retailPrice: 179.00,
     memberPrice: 129.00,
@@ -89,7 +89,7 @@ const PRODUCTS = [
   },
   {
     id: 4,
-    name: "LUMA Minimalist Urban Tech Pack",
+    name: "PUMA Minimalist Urban Tech Pack",
     category: "fashion",
     retailPrice: 139.00,
     memberPrice: 99.00,
@@ -116,7 +116,7 @@ const PRODUCTS = [
   },
   {
     id: 5,
-    name: "LUMA Lumina Smart Ambient Lamp",
+    name: "PUMA Lumina Smart Ambient Lamp",
     category: "smarthome",
     retailPrice: 119.00,
     memberPrice: 89.00,
@@ -143,7 +143,7 @@ const PRODUCTS = [
   },
   {
     id: 6,
-    name: "LUMA Aero Minimalist Sunglasses",
+    name: "PUMA Aero Minimalist Sunglasses",
     category: "fashion",
     retailPrice: 99.00,
     memberPrice: 69.00,
