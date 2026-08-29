@@ -890,6 +890,13 @@ body.light-theme .site-header {
   border: 1px solid var(--border-glass);
   padding: 1.75rem;
   border-radius: var(--radius-md);
+  transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.testimonial-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(99, 102, 241, 0.4);
+  box-shadow: var(--shadow-sm);
 }
 
 .rating-stars {
